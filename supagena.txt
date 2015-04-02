@@ -1,0 +1,102 @@
+﻿IList
+
+http://share.entrypoint.lv/2015-03-16_1337.png
+
+http://habrahabr.ru/post/71820/ - about automapper
+
+http://metanit.com/sharp/entityframework/1.4.php - IQueriable...
+
+boilerplate
+
+http://www.tizbi.com/IssTrack/ --Time Tracker
+
+--------------------------------------------------------------
+IKernel ninjectKernel = new StandardKernel(); экземпляр Ninject ядра – это объект, который мы будем использовать для связи с Ninject и запросом реализаций интерфейса
+
+
+ninjectKernel.Bind<IValueCalculator>().To<LinqValueCalculator>();  Это выражение говорит Ninject, что когда его попросят реализовать интерфейс IValueCalculator, 
+  он должен выполнить запрос, создав новый экземпляр класса LinqValueCalculator
+
+IValueCalculator calc = ninjectKernel.Get<IValueCalculator>(); Параметр типа, используемый методом Get, говорит Ninject, в каком интерфейсе мы заинтересованы, 
+а результаты этого метода является экземпляром типа реализации, который мы только что определили для метода To.
+
+(dependency resolver: функциональная возможность, которая отвечает за создание зависимостей).. MVC использует DR для создания экземпляров классов, 
+для которых он должен обрабатывать запросы. Создавая DR, мы гарантируем, что Ninject будет использоваться всякий раз, когда будет создан объект.
+
+дополнительные ссылки: 
+http://habrahabr.ru/post/176007/ 
+http://smarly.net/pro-asp-net-mvc-4/introducing-asp-net-mvc-4/essential-tools-for-mvc/using-ninject
+
+---------------------------------------------------------------
+
+jQuery intellisense
+
+---------------------------------------------------------------
+
+jQuery DataTables
+http://www.codeproject.com/Articles/155422/jQuery-DataTables-and-ASP-NET-MVC-Integration-Part
+
+Added population of "Disabled" filter dropdown
+------------------------------------------------------------------
+
+Я сделал тебе отдельный branch
+https://tizbi.svn.beanstalkapp.com/boilerplate-asp-net-mvc/branches/jan
+Сделай себе SVN Checkout
+
+Я бы тогда хотел проверить насколько ты разобрался с Boilerplate
+Задание будет такое:
+
+1)Переделать список пользователей на DataTable
+
+Расположить фильтра: Company (dropdown), Email, Role, Enabled (dropdown)
+добавить создание пользователя
+И создание и редактирование пользователя сделать в модальных окнах.
+Для того, что бы показать колонку Enabled в виде <span class="label" />
+Тебе пригодится
+https://datatables.net/reference/option/columns.render#function
+Или
+https://datatables.net/reference/option/columns.data#function
+
+----------------------------------------------
+
+http://share.entrypoint.lv/2015-03-24_1712.png  -- user list default image
+
+Добавить Date Range фильтр по Create Date
+Нужно сделать Date Range Picker при помощи любого плагина, который тебе кажется подходящим
+
+------------------------------------------------------------------------------------------------
+
+CouchBase (views, SDK, query, about NoSQL)
+xUnit (Unit testing)
+Project organization
+git
+
+http://login.centeredgeonline.com/  -- сама система (можно глянуть web ui)
+https://github.com/CenterEdge/CECloud.RevNu -- сам проект на github
+
+http://www.couchbase.com/nosql-databases/downloads ---качать от сюда
+http://docs.couchbase.com/developer/java-2.0/tutorial.html -- туториал по кочбейсу
+
+http://xunit.github.io/docs/getting-started.html -- туториал по xUnit
+
+http://www.microsoft.com/en-us/download/confirmation.aspx?id=42637 --Framework (dev pack)
+
+---------------------
+CenterEdge Software
+Administrator/Pfa3881
+
+Nuget:
+2AZeyenu
+[4:07:57 PM] Sergey Solin: login.centeredgeonline.com
+[4:08:30 PM] Sergey Solin: https://nuget.pfestore.com/nuget/Default
+
+52.0.192.125 -- RevNu remote desktop
+Administrator
+G)d;cWkd2k
+--------------------
+
+что такое CECloud.RevNu.Import
+---------------------------------
+Couch Base init:
+http://10.71.1.78:8091/pools
+-----------------------------------------------------------
